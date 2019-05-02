@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchFilm } from './helpers/fetchCalls.js'
+import FeaturedFilm from './components/FeaturedFilm/FeaturedFilm'
 
 export default class App extends Component {
   constructor() {
@@ -36,11 +37,16 @@ export default class App extends Component {
   }
   
   render() {
-
+    const { film } = this.state;
     return (
       <div className="App">
-      <h1>StarWars</h1>
-    </div>
+    { /* Header */}
+        <main>
+          <h1>StarWars</h1>
+        <FeaturedFilm film={ film }/>
+
+        </main>
+      </div>
   );
 }
 
