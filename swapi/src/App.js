@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchFilm } from './helpers/fetchCalls.js'
+// import { fetchFilm } from './helpers/fetchCalls.js'
 import FeaturedFilm from './components/FeaturedFilm/FeaturedFilm'
 
 export default class App extends Component {
@@ -9,7 +9,8 @@ export default class App extends Component {
       people: [],
       planets: [],
       vehicles: [],
-      film: {}
+      film: {},
+      errorStatus: ''
     }
   }
 
@@ -17,9 +18,15 @@ export default class App extends Component {
     const randomNum = Math.floor(Math.random() * (7 - 1) + 1);
     const url = `https://www.swapi.co/api/films/${randomNum}`
     return fetch(url)
-      .then(response => response.json())
-      .then(film => this.cleanFilm(film))
-      .catch(error => console.log(error))
+      .then(response => {
+        if (response.status >= 400) {
+          this.setState({errorStatus: 'Error fetching film info'});
+        } else {
+          response.json()
+        .then(film => this.cleanFilm(film))
+        .catch(error => console.log(error))
+      }
+    });
   }
 
   cleanFilm = film => {
