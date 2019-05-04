@@ -1,41 +1,33 @@
 //constants
 $pi: 3.14159265359;
-
 // Size (rem) and number (int)
-$circumference: 30;
+$circumference: 40;
 $segments: 20;
 
 @function getArcLength() {
   $degrees: 360 / $segments;
-
   //  Get radians to calculate arc length
   $radians: $degrees * ($pi / 180);
-
   //  Arc length = Radius * Radians
   $arc: ($circumference / 2) * $radians;
-
   @return $arc / 2
 }
 
-
-
-// body {
-//   font-family: -apple-system, BlinkMacSystemFont, “Roboto”, “Droid Sans”, “Helvetica Neue”, Helvetica, Arial, sans-serif;
-//   overflow: hidden;
-// }
-.wheel-section {
+.ship-container {
+  grid-area: ship;
+  border: 3px solid yellowGreen;
   position: relative;
 }
 
-#wheel {
+#ship {
   width: $circumference + rem;
   height: $circumference + rem;
   margin: 1rem auto;
   position: absolute;
   z-index: 10;
-  background: blue;
+  background: hsl(184, 6%, 47%);
   border-radius: 50%;
-  border: 5px solid rgb(3, 145, 150);
+  border: 5px solid hsl(184, 6%, 47%);
   top: 10%;
   left: 50%;
   transform: translateX(-50%); //!!
@@ -47,13 +39,8 @@ $segments: 20;
   position: relative;
   background-color: lightgray;
   border-radius: 100%;
-  transition: all 3s cubic-bezier(0, .99, .88, .99);
+  animation: spin infinite 40s linear;
 }
-
-.spin-wheel {
-  transform: rotate(1000deg);
-}
-
 
 .segment {
   width: 0;
@@ -69,7 +56,7 @@ $segments: 20;
   span {
     display: block;
     margin-top: -(($circumference/2)-3)+rem;
-    color: rgba(0, 0, 0, 0.8);
+    color: hsla(0, 0%, 0%, 0.8);
     position: relative;
     z-index: 10;
     text-align: center;
@@ -96,54 +83,41 @@ $segments: 20;
 
     span {
       &:before {
-        content: "000";
-        color: darkgray;
-        // content: "#{$money}";
+        content: "========";
+        color: hsl(0, 0%, 66%);
       }
     }
   }
 
 }
 
-.spin-winner {
-  text-align: center;
-  margin: 10px 0;
-  font-weight: bold;
-  font-size: 30px;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  color: white;
-}
 
-// .pulse {
-//     // background-color: yellow;
-//     -webkit-animation: blink 1200ms infinite;
-//             animation: blink 1200ms infinite;
-// }
-// @-webkit-keyframes blink { 50% { color: white; }}
-// @keyframes blink { 50% { color: #F06F41; }}
+
 
 
 .pulse {
-  // background-color: yellow;
   -webkit-animation: blink 1200ms infinite;
   animation: blink 1200ms infinite;
 }
 
-// @-webkit-keyframes blink { 50% { color: white; }}
+
 @keyframes blink {
   50% {
-    border: 10px solid #F06F41;
+    border: 10px solid hsl(184, 6%, 47%);
   }
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
 
-.blue {
-  border-right: 5px dotted blue;
-
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.teal {
-  border-right: 5px dotted teal;
-
+.dash {
+  border-right: 5px dashed rgb(136, 127, 127);
 }
+
