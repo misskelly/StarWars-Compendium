@@ -1,4 +1,6 @@
-
+* {
+  box-sizing: border-box;
+}
 
 .App,
 .home {
@@ -8,7 +10,7 @@
   z-index: 1;
 }
 
-.App {
+.home {
   display: grid;
   grid-template-columns: 2fr 6fr 2fr;
   grid-template-rows: 10rem 2fr 1fr;
@@ -31,6 +33,7 @@
 
 .film-container {
   grid-area: film;
+  max-height: 400px;
   border: 3px solid darkmagenta;
 }
 

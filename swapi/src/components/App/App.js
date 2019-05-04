@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Planets from '../../Planets/Planets'
-import Header from '../../Header/Header'
-import Ship from '../../Ship/Ship'
+import Planets from '../Planets/Planets'
+import Header from '../Header/Header'
+import Ship from '../Ship/Ship'
 import FeaturedFilm from '../FeaturedFilm/FeaturedFilm'
 import { fetchFilm } from '../../helpers/fetchCalls.js'
 

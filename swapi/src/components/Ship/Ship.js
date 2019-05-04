@@ -2,7 +2,7 @@ import React from 'react'
 
 const Ship = () => {
   return (
-    <section className='.ship-container'>
+    <section className='ship-container'>
     </section>
   )
 }
