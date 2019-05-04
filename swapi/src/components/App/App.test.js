@@ -1,19 +1,15 @@
 import React from 'react';
 import App from './App';
+import FeaturedFilm from '../FeaturedFilm/FeaturedFilm';
 import { mount, shallow } from 'enzyme';
 // import { fetchFilm as mockFetchFilm } from '../../helpers/fetchCalls.js'
 import { mockCleanFilm, mockDirtyFilm } from '../../helpers/mockData.js';
 
 
 describe('App', () => {
- 
-// const mockActiveComponent = 'planets'
-// const mockEvent = jest.fn()
-// const mockFetchFilm = jest.fn()
-// const mockFetchPlanets = jest.fn()
   let wrapper;
   let initialState;
-
+  
   beforeEach(() => {
     wrapper = shallow(<App />);
     initialState = {
@@ -25,11 +21,16 @@ describe('App', () => {
       activeComponent: ''
     }
   });
-
+  
   it('matches the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   });
-
+  
+  
+ // const mockActiveComponent = 'planets'
+ // const mockEvent = jest.fn()
+ // const mockFetchFilm = jest.fn()
+ // const mockFetchPlanets = jest.fn()
   // window.fetch = jest.fn()
   //   .mockImplementation(
   //     () => Promise.resolve(
@@ -39,13 +40,12 @@ describe('App', () => {
   // })
 
   it('has the correct default state', () => {
-    expect(wrapper.state()).toEqual(initalState);
+    expect(wrapper.state()).toEqual(initialState);
   });
 
   it('renders a FeaturedFilm component with the correct props', () => {
 
     wrapper.setState({ film: mockCleanFilm});
-
     expect(wrapper.find(FeaturedFilm).prop('film')).toEqual(wrapper.state('film'));
 
   });
@@ -65,10 +65,10 @@ describe('App', () => {
 
 
 
-it('should call fetchPlanets on button click', () => {
+  it('should call fetchPlanets on button click', () => {
 
-})
+  })
 
-}
+});
 // on planets button click, we call fetch planets
 // state updates with active component: planets

@@ -17,17 +17,22 @@ exports[`App matches the snapshot 1`] = `
     <section
       className="left-btns"
     >
+      <div
+        className="moon"
+      />
       <button
-        className="planets-btn"
+        className="planets-btn planet-btn"
+        id="planets"
         onClick={[Function]}
       >
         Planets
       </button>
       <button
-        className="planets-btn"
+        className="people-btn planet-btn"
+        id="people"
         onClick={[Function]}
       >
-        Planets
+        People
       </button>
     </section>
     <FeaturedFilm
@@ -37,16 +42,18 @@ exports[`App matches the snapshot 1`] = `
       className="right-btns"
     >
       <button
-        className="planets-btn"
+        className="favs-btn planet-btn"
+        id="favs"
         onClick={[Function]}
       >
-        Planets
+        Favorites
       </button>
       <button
-        className="planets-btn"
+        className="vehicles-btn planet-btn"
+        id="vehicles"
         onClick={[Function]}
       >
-        Planets
+        Vehicles
       </button>
     </section>
     <Ship />
