@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Planets from '../../Planets/Planets'
-import { fetchFilm } from '../../helpers/fetchCalls.js'
+import Header from '../../Header/Header'
+import Ship from '../../Ship/Ship'
 import FeaturedFilm from '../FeaturedFilm/FeaturedFilm'
+import { fetchFilm } from '../../helpers/fetchCalls.js'
 
 export default class App extends Component {
   constructor() {
@@ -27,13 +29,42 @@ export default class App extends Component {
       <main className='App'>
         <div className='stars'></div>
         <div className='twinkling'></div>
-    { /* Header */}
         <section className='home'>
-          <h1>StarWars</h1>
-          <button className='planets-btn' onClick={() => {
-            this.setState({activeComponent: 'planets'})
-          }}>Planets</button>
-        <FeaturedFilm film={ film }/>
+          <Header />
+          
+          <section className='left-btns'>
+            <button 
+              className='planets-btn' 
+              onClick={() => {this.setState({activeComponent: 'planets'})
+              }}>
+            Planets
+            </button>
+            <button 
+              className='planets-btn' 
+              onClick={() => {this.setState({activeComponent: 'planets'})
+              }}>
+            Planets
+            </button>
+          </section>
+
+          <FeaturedFilm film={ film }/>
+          
+          <section className='right-btns'>
+            <button 
+              className='planets-btn' 
+              onClick={() => {this.setState({activeComponent: 'planets'})
+              }}>
+            Planets
+            </button>
+            <button 
+              className='planets-btn' 
+              onClick={() => {this.setState({activeComponent: 'planets'})
+              }}>
+            Planets
+            </button>
+          </section>
+
+          <Ship />
 
         {activeComponent === 'planets' && 
         <Planets />
