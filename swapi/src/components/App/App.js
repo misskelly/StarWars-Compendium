@@ -5,6 +5,8 @@ import Ship from '../Ship/Ship'
 import FeaturedFilm from '../FeaturedFilm/FeaturedFilm'
 import { fetchFilm } from '../../helpers/fetchCalls.js'
 
+
+
 export default class App extends Component {
   constructor() {
     super()
@@ -33,17 +35,20 @@ export default class App extends Component {
           <Header />
           
           <section className='left-btns'>
+            <div className='moon'></div>
             <button 
-              className='planets-btn' 
+              className='planets-btn planet-btn'
+              id='planets' 
               onClick={() => {this.setState({activeComponent: 'planets'})
               }}>
             Planets
             </button>
             <button 
-              className='planets-btn' 
-              onClick={() => {this.setState({activeComponent: 'planets'})
+              className='people-btn planet-btn'
+              id='people' 
+              onClick={() => {this.setState({activeComponent: 'people'})
               }}>
-            Planets
+            People
             </button>
           </section>
 
@@ -51,16 +56,18 @@ export default class App extends Component {
           
           <section className='right-btns'>
             <button 
-              className='planets-btn' 
-              onClick={() => {this.setState({activeComponent: 'planets'})
+              className='favs-btn planet-btn'
+              id='favs' 
+              onClick={() => {this.setState({activeComponent: 'favs'})
               }}>
-            Planets
+            Favorites
             </button>
             <button 
-              className='planets-btn' 
-              onClick={() => {this.setState({activeComponent: 'planets'})
+              className='vehicles-btn planet-btn'
+              id='vehicles'
+              onClick={() => {this.setState({activeComponent: 'vehicles'})
               }}>
-            Planets
+            Vehicles
             </button>
           </section>
 

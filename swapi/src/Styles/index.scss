@@ -1,3 +1,4 @@
+@import 'normalize';
 @import url('https://fonts.googleapis.com/css?family=Gugi|Kanit:700,900|Roboto+Mono');
 @import 'variables';
 @import '../components/App/App';
@@ -8,20 +9,17 @@
 // font-family: 'Gugi',
 // cursive;
 // font-family: 'Roboto Mono',
-// monospace;
-html {
-  margin: -10px 0 0 0;
-}
+// // monospace;
+
 
 body {
   height: 100vh;
-  margin: 0;
-  padding: 0;
   font-family: $primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   color: white;
+  background: #000;
 }
 
 

@@ -1,4 +1,5 @@
 import { cleanFilm } from './cleaners.js'
+import { mockCleanFilm } from '../helpers/mockData.js';
 
 
 export const fetchFilm = () => {
@@ -7,6 +8,6 @@ export const fetchFilm = () => {
   return fetch(url)
     .then(response => response.json())
     .then(film => cleanFilm(film))
-    .catch(error => console.log(error))
+    .catch(mock => cleanFilm(mockCleanFilm))
   }
   
