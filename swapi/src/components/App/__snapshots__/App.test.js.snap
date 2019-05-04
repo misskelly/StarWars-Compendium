@@ -1,3 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App matches the snapshot 1`] = `ShallowWrapper {}`;
+exports[`App matches the snapshot 1`] = `
+<main
+  className="App"
+>
+  <div
+    className="stars"
+  />
+  <div
+    className="twinkling"
+  />
+  <section
+    className="home"
+  >
+    <Header />
+    <section
+      className="left-btns"
+    >
+      <button
+        className="planets-btn"
+        onClick={[Function]}
+      >
+        Planets
+      </button>
+      <button
+        className="planets-btn"
+        onClick={[Function]}
+      >
+        Planets
+      </button>
+    </section>
+    <FeaturedFilm
+      film={Object {}}
+    />
+    <section
+      className="right-btns"
+    >
+      <button
+        className="planets-btn"
+        onClick={[Function]}
+      >
+        Planets
+      </button>
+      <button
+        className="planets-btn"
+        onClick={[Function]}
+      >
+        Planets
+      </button>
+    </section>
+    <Ship />
+  </section>
+</main>
+`;

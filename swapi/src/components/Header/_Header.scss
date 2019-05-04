@@ -1,0 +1,43 @@
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-left,
+.nav-right {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav-left-ul,
+.nav-right-ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.main-heading {
+  text-align: center;
+  font-family: $jedi;
+  text-transform: uppercase;
+  color: $yellow;
+}
+
+.sw-heading {
+  display: block;
+  font-size: 3rem;
+  line-height: 1;
+}

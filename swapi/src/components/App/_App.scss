@@ -12,9 +12,9 @@
 
 .home {
   display: grid;
-  grid-template-columns: 2fr 6fr 2fr;
+  grid-template-columns: 2fr 3fr 2fr;
   grid-template-rows: 10rem 2fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header"
     "left film right"
     "left ship right";
@@ -28,8 +28,41 @@
 
 .left-btns {
   grid-area: left;
-  border: 3px solid blue;
+  display: grid;
+  grid-template-areas:
+    ". . ."
+    "moon . planets"
+    ". . ."
+    "people people people"
+    "people people people"
+    "people people people"
+    ". . ."
+  }
+
+.moon {
+  grid-area: moon;
+  border-radius: 100%;
+  background: rgb(160, 154, 154);
+  height: 2rem;
+  width: 2rem;
+  margin: 7rem 0 0 3rem;
 }
+.planets-btn{
+  grid-area: planets;
+  padding: 2rem;
+  height: 13rem;
+  width: 13rem;
+  margin: 3rem;
+}
+
+.people-btn{
+  grid-area: people;
+  padding: 2rem;
+  height: 10rem;
+  width: 10rem;
+  margin-left: 3rem;
+  }
+
 
 .film-container {
   grid-area: film;
@@ -39,7 +72,55 @@
 
 .right-btns {
   grid-area: right;
-  border: 3px solid blue;
+  display: grid;
+  grid-template-areas:
+    "favs favs ."
+    "favs favs ."
+    ". . ."
+    "ships ships ships"
+    "ships ships ships"
+    "ships ships ships"
+    "ships ships ships"
+}
+
+.favs-btn{
+  grid-area: favs;
+  padding: 2rem;
+  height: 8rem;
+  width: 8rem;
+  margin: 0 0 3rem 5rem;
+}
+
+.vehicles-btn {
+  grid-area: ships;
+  height: 20rem;
+  width: 20rem;
+  margin: 2rem;
+}
+
+.planet-btn {
+  -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+  -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+  background: -moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background: -webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background: -o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background: -ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437', GradientType=0);
+  background-color: #c62d1f;
+  -moz-border-radius: $circle;
+  -webkit-border-radius: $circle;
+  border-radius: $circle;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
 }
 
 .ship-container {
