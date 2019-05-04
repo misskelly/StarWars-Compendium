@@ -1,0 +1,45 @@
+
+
+.App,
+.home {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 2fr 6fr 2fr;
+  grid-template-rows: 10rem 2fr 1fr;
+  grid-template-areas: 
+    "header header header"
+    "left film right"
+    "left ship right";
+}
+
+
+.header {
+  grid-area: header;
+  border: 3px solid salmon;
+}
+
+.left-btns {
+  grid-area: left;
+  border: 3px solid blue;
+}
+
+.film-container {
+  grid-area: film;
+  border: 3px solid darkmagenta;
+}
+
+.right-btns {
+  grid-area: right;
+  border: 3px solid blue;
+}
+
+.ship {
+  grid-area: ship;
+  border: 3px solid yellowGreen;
+}
