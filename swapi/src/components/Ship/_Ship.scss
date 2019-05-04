@@ -15,7 +15,6 @@ $segments: 20;
 
 .ship-container {
   grid-area: ship;
-  border: 3px solid yellowGreen;
   position: relative;
 }
 
@@ -78,7 +77,6 @@ $segments: 20;
 
   .segment:nth-child(#{$i}) {
     $deg: ((360/$segments)*$i)-(360/$segments);
-    $money: ($i);
     transform: rotate($deg+deg);
 
     span {
@@ -92,9 +90,6 @@ $segments: 20;
 }
 
 
-
-
-
 .pulse {
   -webkit-animation: blink 1200ms infinite;
   animation: blink 1200ms infinite;
@@ -103,7 +98,7 @@ $segments: 20;
 
 @keyframes blink {
   50% {
-    border: 10px solid hsl(184, 6%, 47%);
+    border: 9px solid hsl(184, 6%, 47%);
   }
 }
 
@@ -111,7 +106,6 @@ $segments: 20;
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
