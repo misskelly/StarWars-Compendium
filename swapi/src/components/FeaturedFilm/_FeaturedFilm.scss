@@ -1,7 +1,19 @@
 .film-container {
-  z-index: 10;
+  grid-area: film;
 }
 
+h3, h4, h5, {
+  margin: 0;
+}
 .crawler {
   background: transparent;
+}
+
+.film-info {
+  text-align: center;
+}
+.film-title {
+  line-height: 1;
+  font-family: $alien;
+  margin-top: 3rem;
 }

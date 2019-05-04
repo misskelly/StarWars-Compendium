@@ -1,5 +1,5 @@
-
 .header {
+  grid-area: header;
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
 }
@@ -34,6 +34,7 @@ li {
   font-family: $jedi;
   text-transform: uppercase;
   color: $yellow;
+  text-shadow: $outline;
 }
 
 .sw-heading {

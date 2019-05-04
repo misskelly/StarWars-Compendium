@@ -7,8 +7,9 @@ monospace;
 
 
 $yellow: hsla(51, 100%, 50%, 1);
+$shadow: rgb(104, 99, 71);
 
-
+$outline: 2px 2px 0 $shadow, 2px -2px 0 $shadow, -2px 2px 0 $shadow, -2px -2px 0 $shadow, 2px 0px 0 $shadow, 0px 2px 0 $shadow, -2px 0px 0 $shadow, 0px -2px 0 $shadow;
 // buttons
 
 $circle: 100%;
