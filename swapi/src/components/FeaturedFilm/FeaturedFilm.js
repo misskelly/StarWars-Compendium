@@ -12,7 +12,7 @@ const FeaturedFilm = ({film}) => {
       />
       <article className='film-info'>
         <h3 className='film-title'>{film.title}</h3>
-        <h4 className='subtitler'>{film.subtitle}</h4>
+        <h4 className='subtitle'>{film.subtitle}</h4>
         <h5 className='release-year'>{film.year}</h5>
       </article>
       
