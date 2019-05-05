@@ -1,21 +1,25 @@
 * {
   box-sizing: border-box;
 }
+html {
+  height: 100%;
 
+}
 .App,
 .container,
 .home {
   position: relative;
   width: 100%;
-  height: 100vh;
   z-index: 1;
+  margin: 0;
 }
 
 .home {
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: auto auto 1fr;
   grid-template-areas:
+    "left film right"
     "left film right"
     "left ship right";
 }
@@ -23,6 +27,31 @@
   
 // }
 
+.planet-btn {
+  margin: 1rem;
+  -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+  -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+  background: -moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background: -webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background: -o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background: -ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437', GradientType=0);
+  background-color: #c62d1f;
+  -moz-border-radius: $circle;
+  -webkit-border-radius: $circle;
+  border-radius: $circle;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: $alien;
+  font-size: 2rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+}
 
 
 .left-btns {
@@ -50,7 +79,6 @@
   padding: 2rem;
   height: 15rem;
   width: 15rem;
-  // margin: 3rem;
 }
 
 .people-btn {
@@ -73,44 +101,19 @@
     "ships ships ships"
     "ships ships ships"
     "ships ships ships"
-}
-
-.favs-btn {
-  grid-area: favs;
-  padding: 2rem;
-  height: 13rem;
-  width: 13rem;
-  // margin: 0 0 3rem 5rem;
-}
-
-.vehicles-btn {
-  grid-area: ships;
-  height: 18rem;
-  width: 18rem;
-  margin: 0 2rem 2rem 0;
-}
-
-.planet-btn {
-  -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
-  -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
-  box-shadow: 3px 4px 0px 0px #8a2a21;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
-  background: -moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-  background: -webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-  background: -o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-  background: -ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437', GradientType=0);
-  background-color: #c62d1f;
-  -moz-border-radius: $circle;
-  -webkit-border-radius: $circle;
-  border-radius: $circle;
-  border: 1px solid #d02718;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: $alien;
-  font-size: 2rem;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #810e05;
+  }
+  
+  .favs-btn {
+    grid-area: favs;
+    padding: 2rem;
+    height: 13rem;
+    width: 13rem;
+    margin: 0 0 3rem 0;
+  }
+  
+  .vehicles-btn {
+    grid-area: ships;
+    height: 18rem;
+    width: 18rem;
+    margin: 3rem 2rem;
 }
