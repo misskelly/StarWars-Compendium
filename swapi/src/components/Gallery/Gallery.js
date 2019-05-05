@@ -5,7 +5,7 @@ const Gallery = ({collection, category}) => {
   
   const getCards = (collectionData) => {
     collectionData.map((item, index) => {
-      return <Card key={`${index}_${item.name}`} item={item} category={category}/>
+      // return <Card key={`${index}_${item.name}`} item={item} category={category}/>
     })
   }
   const cards = getCards(collection);

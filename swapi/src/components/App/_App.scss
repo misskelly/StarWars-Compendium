@@ -3,6 +3,7 @@
 }
 
 .App,
+.container,
 .home {
   position: relative;
   width: 100%;
@@ -13,13 +14,14 @@
 .home {
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;
-  grid-template-rows: 10rem 3fr 1fr;
+  grid-template-rows: 3fr 1fr;
   grid-template-areas:
-    "header header header"
     "left film right"
     "left ship right";
 }
-
+// .container {
+  
+// }
 
 
 
@@ -27,7 +29,6 @@
   grid-area: left;
   display: grid;
   grid-template-areas:
-    ". . ."
     "moon . planets"
     ". . ."
     "people people people"
@@ -68,7 +69,6 @@
   grid-template-areas:
     "favs favs ."
     "favs favs ."
-    ". . ."
     "ships ships ships"
     "ships ships ships"
     "ships ships ships"
@@ -85,9 +85,9 @@
 
 .vehicles-btn {
   grid-area: ships;
-  height: 22rem;
-  width: 22rem;
-  margin: 2rem;
+  height: 18rem;
+  width: 18rem;
+  margin: 0 2rem 2rem 0;
 }
 
 .planet-btn {

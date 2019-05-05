@@ -17,8 +17,10 @@ export const getNumeral = num => {
 }
 
 export const handleClean = (item, category) => {
-  return category === 'person' ? cleanPerson(item) : 
-  category === 'vehicle' ? cleanVehicle(item) : ''
+  console.log('handle', item, category)
+
+  category === 'people' ? cleanPerson(item) : console.log('not person')
+  
   
 }
 
@@ -26,7 +28,9 @@ export const cleanVehicle= (ship) => {
  
   console.log('clean vehicle')
 }
+
 export const cleanPerson = (person) => {
+  console.log('person:', person)
   return {
     name: person.name,
     homeworld: person.homeworld,
