@@ -3,7 +3,8 @@ import Gallery from '../Gallery/Gallery'
 import Header from '../Header/Header'
 import Ship from '../Ship/Ship'
 import FeaturedFilm from '../FeaturedFilm/FeaturedFilm'
-import { fetchFilm } from '../../helpers/fetchCalls.js'
+import { handleClean } from '../../helpers/cleaners'
+import { fetchFilm, getCollection, fetchData } from '../../helpers/fetchCalls.js'
 
 
 
@@ -18,21 +19,35 @@ export default class App extends Component {
       errorStatus: '',
       activeComponent: ''
     }
-  }
-
-  getPeople() {
-    fetchPeople() {
-
-    }
-  }
-  handleClick(e) {
-    {this.setState({activeComponent: e.target.id})
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     fetchFilm()
       .then(film => this.setState({ film }))
     }
+  mapResults(results, cat) {
+    console.log('map')
+    const promises = results.map(item => handleClean(item, cat));
+    console.log(Promise.all(promises));
+    return Promise.all(promises);
+  }
+
+  getData(category) {
+    console.log('getData')
+    const url = `https://www.swapi.co/api/${category}/`;
+    return fetchData(url)
+      .then(data => this.mapResults(data, category))
+      .then(result => this.setState({[category]: result}))
+      .catch(err => this.setState({errorStatus: 'Error fetching data'}))
+  }
+
+  handleClick(e) {
+    const category = e.target.id;
+    this.setState({activeComponent: category});
+    this.getData(category)
+  }
+
     
     render() {
       const { film, activeComponent } = this.state;
@@ -55,8 +70,7 @@ export default class App extends Component {
             <button 
               className='people-btn planet-btn'
               id='people' 
-              onClick={() => {this.setState({activeComponent: 'people'})
-              }}>
+              onClick={this.handleClick}>
             People
             </button>
           </section>
@@ -81,7 +95,7 @@ export default class App extends Component {
           </section>
           <Ship />
         {activeComponent !== '' && 
-        <Gallery collection={this.state[activeComponent]}/>
+        <Gallery collection={this.state[activeComponent]} category={activeComponent}/>
       }
 
         </section>

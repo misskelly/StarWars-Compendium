@@ -15,3 +15,22 @@ export const getNumeral = num => {
   const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII']
   return numerals[i];
 }
+
+export const handleClean = (item, category) => {
+  return category === 'person' ? cleanPerson(item) : 
+  category === 'vehicle' ? cleanVehicle(item) : ''
+  
+}
+
+export const cleanVehicle= (ship) => {
+ 
+  console.log('clean vehicle')
+}
+export const cleanPerson = (person) => {
+  return {
+    name: person.name,
+    homeworld: person.homeworld,
+    species: person.species,
+    pop: person.home
+  }
+}
