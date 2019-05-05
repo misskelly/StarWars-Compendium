@@ -7,7 +7,6 @@ export const cleanFilm = film => {
     scroll: opening_crawl,
     year: release_date.slice(0, 4)
   }
-  console.log('film:', film);
   return clean
 }
 
