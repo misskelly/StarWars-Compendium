@@ -11,75 +11,13 @@ exports[`App matches the snapshot 1`] = `
     className="twinkling"
   />
   <section
-    className="home"
+    className="container"
   >
     <Header />
-    <section
-      className="left-btns"
-    >
-      <div
-        className="moon"
-      />
-      <button
-        className="planets-btn planet-btn"
-        id="planets"
-        onClick={[Function]}
-      >
-        Planets
-      </button>
-      <button
-        className="people-btn planet-btn"
-        id="people"
-        onClick={[Function]}
-      >
-        People
-      </button>
-    </section>
-    <FeaturedFilm
+    <Home
       film={Object {}}
-      scroll="Turmoil has engulfed the
-Galactic Republic. The taxation
-of trade routes to outlying star
-systems is in dispute.
-
-Hoping to resolve the matter
-with a blockade of deadly
-battleships, the greedy Trade
-Federation has stopped all
-shipping to the small planet
-of Naboo.
-
-While the Congress of the
-Republic endlessly debates
-this alarming chain of events,
-the Supreme Chancellor has
-secretly dispatched two Jedi
-Knights, the guardians of
-peace and justice in the
-galaxy, to settle the conflict...."
-      subtitle="The Phantom Menace"
-      title="Episode I"
-      year="1999"
+      updateActiveComponent={[Function]}
     />
-    <section
-      className="right-btns"
-    >
-      <button
-        className="favs-btn planet-btn"
-        id="favs"
-        onClick={[Function]}
-      >
-        Favorites
-      </button>
-      <button
-        className="vehicles-btn planet-btn"
-        id="vehicles"
-        onClick={[Function]}
-      >
-        Vehicles
-      </button>
-    </section>
-    <Ship />
   </section>
 </main>
 `;

@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Card from '../Card/Card'
 
-const Gallery = ({collection}) => {
-  const cards = this.getCards(collection);
-
-  getCards(collection) {
-    collection.map((item, index) => {
-      return <Card key={`${index}_${item.name}`} item={item} />
+const Gallery = ({collection, category}) => {
+  
+  const getCards = (collectionData) => {
+    collectionData.map((item, index) => {
+      // return <Card key={`${index}_${item.name}`} item={item} category={category}/>
     })
   }
+  const cards = getCards(collection);
 
     return(
       <section className='Gallery'>
@@ -15,4 +16,5 @@ const Gallery = ({collection}) => {
       </section>
     )
   }
-}
+
+  export default Gallery;

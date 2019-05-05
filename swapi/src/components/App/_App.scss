@@ -1,96 +1,34 @@
 * {
   box-sizing: border-box;
 }
+html {
+  height: 100%;
 
+}
 .App,
+.container,
 .home {
   position: relative;
   width: 100%;
-  height: 100vh;
   z-index: 1;
+  margin: 0;
 }
 
 .home {
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;
-  grid-template-rows: 10rem 3fr 1fr;
+  grid-template-rows: auto auto 1fr;
   grid-template-areas:
-    "header header header"
+    "left film right"
     "left film right"
     "left ship right";
 }
-
-
-
-
-.left-btns {
-  grid-area: left;
-  display: grid;
-  grid-template-areas:
-    ". . ."
-    "moon . planets"
-    ". . ."
-    "people people people"
-    "people people people"
-    "people people people"
-}
-
-.moon {
-  grid-area: moon;
-  border-radius: 100%;
-  background: rgb(160, 154, 154);
-  height: 2rem;
-  width: 2rem;
-  margin: 7rem 0 0 3rem;
-}
-
-.planets-btn {
-  grid-area: planets;
-  padding: 2rem;
-  height: 15rem;
-  width: 15rem;
-  // margin: 3rem;
-}
-
-.people-btn {
-  grid-area: people;
-  padding: 2rem;
-  height: 11rem;
-  width: 11rem;
-  margin: 0 0 0 5rem;
-}
-
-
-
-.right-btns {
-  grid-area: right;
-  display: grid;
-  grid-template-areas:
-    "favs favs ."
-    "favs favs ."
-    ". . ."
-    "ships ships ships"
-    "ships ships ships"
-    "ships ships ships"
-    "ships ships ships"
-}
-
-.favs-btn {
-  grid-area: favs;
-  padding: 2rem;
-  height: 13rem;
-  width: 13rem;
-  // margin: 0 0 3rem 5rem;
-}
-
-.vehicles-btn {
-  grid-area: ships;
-  height: 22rem;
-  width: 22rem;
-  margin: 2rem;
-}
+// .container {
+  
+// }
 
 .planet-btn {
+  margin: 1rem;
   -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
   -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
   box-shadow: 3px 4px 0px 0px #8a2a21;
@@ -113,4 +51,69 @@
   font-size: 2rem;
   text-decoration: none;
   text-shadow: 0px 1px 0px #810e05;
+}
+
+
+.left-btns {
+  grid-area: left;
+  display: grid;
+  grid-template-areas:
+    "moon . planets"
+    ". . ."
+    "people people people"
+    "people people people"
+    "people people people"
+}
+
+.moon {
+  grid-area: moon;
+  border-radius: 100%;
+  background: rgb(160, 154, 154);
+  height: 2rem;
+  width: 2rem;
+  margin: 7rem 0 0 3rem;
+}
+
+.planets-btn {
+  grid-area: planets;
+  padding: 2rem;
+  height: 15rem;
+  width: 15rem;
+}
+
+.people-btn {
+  grid-area: people;
+  padding: 2rem;
+  height: 11rem;
+  width: 11rem;
+  margin: 0 0 0 5rem;
+}
+
+
+
+.right-btns {
+  grid-area: right;
+  display: grid;
+  grid-template-areas:
+    "favs favs ."
+    "favs favs ."
+    "ships ships ships"
+    "ships ships ships"
+    "ships ships ships"
+    "ships ships ships"
+  }
+  
+  .favs-btn {
+    grid-area: favs;
+    padding: 2rem;
+    height: 13rem;
+    width: 13rem;
+    margin: 0 0 3rem 0;
+  }
+  
+  .vehicles-btn {
+    grid-area: ships;
+    height: 18rem;
+    width: 18rem;
+    margin: 3rem 2rem;
 }

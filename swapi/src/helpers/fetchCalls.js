@@ -9,10 +9,8 @@ export const fetchFilm = () => {
     .then(film => cleanFilm(film))
     .catch(mock => cleanFilm(mockCleanFilm))
   }
-  
-export const getPeople = () => {
-  const url = `https://www.swapi.co/api/${collection}/`
-}
+
+
 
 export const fetchData = (url) => {
   return fetch(url)

@@ -3,8 +3,6 @@
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
 }
-
-
 ul,
 li {
   list-style-type: none;
@@ -35,6 +33,7 @@ li {
   text-transform: uppercase;
   color: $yellow;
   text-shadow: $outline;
+  font-size: 1rem;
 }
 
 .sw-heading {

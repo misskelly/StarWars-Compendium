@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Gallery from '../Gallery/Gallery'
 import Header from '../Header/Header'
-import Ship from '../Ship/Ship'
-import FeaturedFilm from '../FeaturedFilm/FeaturedFilm'
-import { fetchFilm } from '../../helpers/fetchCalls.js'
+import Home from '../Home/Home'
+import { handleClean } from '../../helpers/cleaners'
+import { fetchFilm, fetchData } from '../../helpers/fetchCalls.js'
 
 
 
@@ -18,21 +18,36 @@ export default class App extends Component {
       errorStatus: '',
       activeComponent: ''
     }
-  }
-
-  getPeople() {
-    fetchPeople() {
-
-    }
-  }
-  handleClick(e) {
-    {this.setState({activeComponent: e.target.id})
+    this.updateActiveComponent = this.updateActiveComponent.bind(this);
   }
 
   componentDidMount() {
     fetchFilm()
       .then(film => this.setState({ film }))
     }
+  mapResults(data, cat) {
+    console.log('map', data, cat)
+    let items = (data.results.map(item => {
+      console.log('map-item', item)
+      return handleClean(item, cat)
+    }))
+    return items;
+  }
+
+  getData(category) {
+    console.log('getData')
+    const url = `https://www.swapi.co/api/${category}/`;
+    return fetchData(url)
+      .then(data => this.mapResults(data, category))
+      .then(result => this.setState({ [category]: result }))
+      .catch(err => this.setState({ errorStatus: 'Error fetching data' }))
+  }
+
+  updateActiveComponent(category) {
+    this.setState({ activeComponent: category });
+    this.getData(category);
+  }
+
     
     render() {
       const { film, activeComponent } = this.state;
@@ -41,48 +56,14 @@ export default class App extends Component {
       <main className='App'>
         <div className='stars'></div>
         <div className='twinkling'></div>
-        <section className='home'>
+        <section className='container'>
           <Header />
-          <section className='left-btns'>
-            <div className='moon'></div>
-            <button 
-              className='planets-btn planet-btn'
-              id='planets' 
-              onClick={() => {this.setState({activeComponent: 'planets'})
-              }}>
-            Planets
-            </button>
-            <button 
-              className='people-btn planet-btn'
-              id='people' 
-              onClick={() => {this.setState({activeComponent: 'people'})
-              }}>
-            People
-            </button>
-          </section>
-
-          <FeaturedFilm film={ film }/>
-          
-          <section className='right-btns'>
-            <button 
-              className='favs-btn planet-btn'
-              id='favs' 
-              onClick={() => {this.setState({activeComponent: 'favs'})
-              }}>
-            Favorites
-            </button>
-            <button 
-              className='vehicles-btn planet-btn'
-              id='vehicles'
-              onClick={() => {this.setState({activeComponent: 'vehicles'})
-              }}>
-            Vehicles
-            </button>
-          </section>
-          <Ship />
-        {activeComponent !== '' && 
-        <Gallery collection={this.state[activeComponent]}/>
-      }
+          { activeComponent === '' &&
+          <Home updateActiveComponent={ this.updateActiveComponent } film={ film } />
+          }
+          { activeComponent !== '' && 
+            <Gallery collection={this.state[activeComponent]} category={ activeComponent }/>
+          }
 
         </section>
       </main>
