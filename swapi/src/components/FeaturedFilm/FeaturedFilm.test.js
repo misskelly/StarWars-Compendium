@@ -2,7 +2,7 @@ import React from 'react';
 import FeaturedFilm from '../FeaturedFilm/FeaturedFilm';
 import { shallow } from 'enzyme';
 import Crawl from 'react-star-wars-crawl';
-import { mockCleanFilm, mockDirtyFilm } from '../../helpers/mockData.js';
+import { mockCleanFilm } from '../../helpers/mockData.js';
 
 
 describe('FeaturedFilm', () => {
@@ -23,8 +23,11 @@ describe('FeaturedFilm', () => {
     expect(wrapper.find(Crawl).prop('subTitle')).toEqual(mockCleanFilm.subtitle)
 
     expect(wrapper.find(Crawl).prop('text')).toEqual(mockCleanFilm.scroll);
+ 
   });
 });
+
+
   // // on component did mount we call fetch film
   // it('should call fetchFilm on mount', () => {
   //   // mount component
@@ -39,33 +42,9 @@ describe('FeaturedFilm', () => {
 
 
 
-// describe('OpeningCrawl', () => {
-//   let wrapper;
-//   beforeEach(() => {
-//     wrapper = shallow( < OpeningCrawl / > );
-//   });
 
-//   it('should match the snapshot', () => {
-//     expect(wrapper).toMatchSnapshot();
-//   });
 
-//   it('should have initial state', () => {
-//     expect(wrapper.state()).toEqual({
-//       film: {},
-//       loading: true,
-//       error: ''
-//     });
-//   });
-
-//   describe('getNumber', () => {
-//     it('should convert a number to roman numeral', () => {
-//       const nums = [1, 2, 3, 4, 5, 6, 7];
-//       const received = nums.map(num => wrapper.instance().getRomanNumeral(num));
-//       expect(received).toEqual(['I', 'II', 'III', 'IV', 'V', 'VI', 'VII']);
-//     });
-//   });
-
-//   describe('getMovie', () => {
+//   describe('getFilm', () => {
 //     it('should update movie state on success', async () => {
 //       await wrapper.instance().getMovie();
 //       expect(wrapper.state('film')).toHaveProperty(...Object.keys(mockFilm));

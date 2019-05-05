@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App';
 import FeaturedFilm from '../FeaturedFilm/FeaturedFilm';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 // import { fetchFilm as mockFetchFilm } from '../../helpers/fetchCalls.js'
 import { mockCleanFilm, mockDirtyFilm } from '../../helpers/mockData.js';
 
@@ -50,6 +50,18 @@ describe('App', () => {
 
   });
 
+  // it('should set the film state on mount', () => {
+  //   window.fetch = jest.fn().mockImplementation(() => {
+  //     return Promise.resolve({
+  //       ok: true,
+  //       json: () => Promise.resolve(mockCleanFilm)
+  //     });
+  //   });
+    
+  //   expect(wrapper.state('film')).toEqual(mockCleanFilm)
+  // })
+
+  
   // // on component did mount we call fetch film
   // it('should call fetchFilm on mount', () => {
   //   // mount component
@@ -60,8 +72,6 @@ describe('App', () => {
   //     // assert that state was set with film
   //     // state updates with new film after cdm
   // })
-
-
 
 
 

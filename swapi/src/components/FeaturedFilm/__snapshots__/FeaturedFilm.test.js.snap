@@ -5,6 +5,7 @@ exports[`FeaturedFilm matches the snapshot 1`] = `
   className="film-container"
 >
   <Crawl
+    subTitle="The Phantom Menace"
     text="Turmoil has engulfed the
 Galactic Republic. The taxation
 of trade routes to outlying star
@@ -12,8 +13,20 @@ systems is in dispute.
 
 Hoping to resolve the matter
 with a blockade of deadly
-battleships, the greedy …"
-    title="The Phantom Menace"
+battleships, the greedy Trade
+Federation has stopped all
+shipping to the small planet
+of Naboo.
+
+While the Congress of the
+Republic endlessly debates
+this alarming chain of events,
+the Supreme Chancellor has
+secretly dispatched two Jedi
+Knights, the guardians of
+peace and justice in the
+galaxy, to settle the conflict...."
+    title="Episode I"
   />
   <article
     className="film-info"
@@ -21,11 +34,13 @@ battleships, the greedy …"
     <h3
       className="film-title"
     >
-      The Phantom Menace
+      Episode I
     </h3>
     <h4
       className="subtitle"
-    />
+    >
+      The Phantom Menace
+    </h4>
     <h5
       className="release-year"
     >

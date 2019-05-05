@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Planets from '../Planets/Planets'
+import Gallery from '../Gallery/Gallery'
 import Header from '../Header/Header'
 import Ship from '../Ship/Ship'
 import FeaturedFilm from '../FeaturedFilm/FeaturedFilm'
@@ -20,20 +20,29 @@ export default class App extends Component {
     }
   }
 
+  getPeople() {
+    fetchPeople() {
+
+    }
+  }
+  handleClick(e) {
+    {this.setState({activeComponent: e.target.id})
+  }
+
   componentDidMount() {
     fetchFilm()
       .then(film => this.setState({ film }))
-  }
-  
-  render() {
-    const { film, activeComponent } = this.state;
+    }
+    
+    render() {
+      const { film, activeComponent } = this.state;
+      
     return (
       <main className='App'>
         <div className='stars'></div>
         <div className='twinkling'></div>
         <section className='home'>
           <Header />
-          
           <section className='left-btns'>
             <div className='moon'></div>
             <button 
@@ -70,12 +79,10 @@ export default class App extends Component {
             Vehicles
             </button>
           </section>
-
           <Ship />
-
-        {activeComponent === 'planets' && 
-        <Planets />
-        }
+        {activeComponent !== '' && 
+        <Gallery collection={this.state[activeComponent]}/>
+      }
 
         </section>
       </main>
