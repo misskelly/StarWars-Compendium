@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Gallery from '../Gallery/Gallery'
 import Header from '../Header/Header'
+import Loading from '../Loading/Loading'
 import Home from '../Home/Home'
 import { handleClean } from '../../helpers/cleaners'
 import { fetchFilm, fetchData } from '../../helpers/fetchCalls.js'
@@ -15,6 +16,7 @@ export default class App extends Component {
       planets: [],
       vehicles: [],
       film: {},
+      loading: false,
       errorStatus: '',
       activeComponent: ''
     }
@@ -22,24 +24,19 @@ export default class App extends Component {
   }
 
   componentDidMount() {
+    this.setState({loading: true})
     fetchFilm()
-      .then(film => this.setState({ film }))
+      .then(film => this.setState({ film, loading: false }))
     }
-  mapResults(data, cat) {
-    console.log('map', data, cat)
-    let items = (data.results.map(item => {
-      console.log('map-item', item)
-      return handleClean(item, cat)
-    }))
-    return items;
-  }
+  
+  
 
   getData(category) {
-    console.log('getData')
     const url = `https://www.swapi.co/api/${category}/`;
+    this.setState({ loading: true })
     return fetchData(url)
-      .then(data => this.mapResults(data, category))
-      .then(result => this.setState({ [category]: result }))
+      .then(data => handleClean(data, category))
+      .then(result => this.setState({ [category]: result, loading: false }))
       .catch(err => this.setState({ errorStatus: 'Error fetching data' }))
   }
 
@@ -50,13 +47,14 @@ export default class App extends Component {
 
     
     render() {
-      const { film, activeComponent } = this.state;
+      const { film, activeComponent, loading } = this.state;
       
     return (
       <main className='App'>
         <div className='stars'></div>
         <div className='twinkling'></div>
         <section className='container'>
+        { loading && <Loading /> }
           <Header />
           { activeComponent === '' &&
           <Home updateActiveComponent={ this.updateActiveComponent } film={ film } />

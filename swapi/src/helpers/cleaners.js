@@ -1,3 +1,5 @@
+import { getSpecies, getHomeworldInfo, fetchData, getDirtyItems } from './fetchCalls'
+
 export const cleanFilm = film => {
   const { title, opening_crawl, release_date, episode_id } = film
   const num = getNumeral(episode_id)
@@ -16,12 +18,42 @@ export const getNumeral = num => {
   return numerals[i];
 }
 
-export const handleClean = (item, category) => {
-  console.log('handle', item, category)
 
-  category === 'people' ? cleanPerson(item) : console.log('not person')
+// mapResults(data, cat) {
+//   let items = (data.results.map(item => {
+//     return handleClean(item, cat)
+//   }))
+//   return Promise.all(items);
+// }
+export const handleClean = (data, category) => {
   
+  const clean = getDirtyItems(data, category)
+    .then(result => {
+      console.log('.then')
+      cleanEach(result)
+    })
+  // .then(dirty => cleanEach(dirty, category))
+  // .catch(err => console.log('shit', err))
   
+  console.log(clean)
+  return clean
+  
+}
+
+export const cleanEach = (collection) => {
+  console.log('dirty')
+  const cleaned = collection.map(item => {
+    // console.log(item)
+    return cleanPerson(item)
+            .then(person => console.log('clean person', person))
+    // if (category === 'people') {
+    //   return cleanPerson(item)
+    // } else {
+    //   return item;
+    // }
+  })
+  
+  return Promise.all(cleaned)
 }
 
 export const cleanVehicle= (ship) => {
@@ -30,11 +62,13 @@ export const cleanVehicle= (ship) => {
 }
 
 export const cleanPerson = (person) => {
-  console.log('person:', person)
-  return {
-    name: person.name,
-    homeworld: person.homeworld,
-    species: person.species,
-    pop: person.home
-  }
+  let breed = getSpecies(person.species)
+  let cleanedPerson = getHomeworldInfo(person.homeworld)
+      .then(planet => ({name: person.name, species: breed,  ...planet}))
+  
+  return cleanedPerson;
 }
+
+
+
+
