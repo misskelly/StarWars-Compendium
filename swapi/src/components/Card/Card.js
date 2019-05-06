@@ -4,13 +4,13 @@ const Card = ({category, item}) => {
   const { name, species, homeworld, population } = item;
 return (
   <article className='card'>
-    <h3>{name}</h3>
+    <h3 className='card-heading'>{name}</h3>
     <ul>
-      <li>species: {species}</li>
-      <li>homeworld: {homeworld}</li>
-      <li>population: {population}</li>
+      <li className='card-detail'>species: {species}</li>
+      <li className='card-detail'>homeworld: {homeworld}</li>
+      <li className='card-detail'>population: {population}</li>
     </ul>
-    <button>Favorite</button>
+    <button className='fav-btn'>Favorite</button>
   </article>
 )
 }

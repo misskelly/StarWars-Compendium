@@ -1,0 +1,25 @@
+.gallery {
+  width: 100%;
+}
+
+.card-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  margin-top: 25px;
+  padding: 20px;
+  width: 100%;
+  overflow: auto;
+}
+
+.gallery-heading {
+  padding: 3rem 3rem 3rem 8rem;
+  text-align: center;
+  font-family: $jedi;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 0%);
+  text-shadow: $outline;
+  font-size: 5rem;
+  letter-spacing: 5rem;
+}

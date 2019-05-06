@@ -1,0 +1,40 @@
+.card {
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  border: 1px solid hsl(20, 3%, 54%);
+  box-shadow: 3px 2px 2px hsl(200, 100%, 1%);
+  background: hsla(221, 96%, 48%, 0.351);
+  min-width: 250px;
+  position: relative;
+  padding: 1rem;
+  color: hsl(0, 0%, 84%);
+}
+
+.card:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 5px 5px 5px hsl(204, 25%, 20%);
+}
+
+.card-heading {
+  padding: 0 0 1rem 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: $alien;
+  border-bottom: 1px solid $yellow;
+}
+
+.fav-btn {
+  float: right;
+  position: relative;
+  margin: 1rem 0 0 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    color: $yellow;
+  }
+}
