@@ -1,20 +1,21 @@
 import React from 'react'
 
-const personCard = ({name, homeworld, species, popOfHome}) => {
+const Card = ({category, item}) => {
+  const { name, species, homeworld, population } = item;
 return (
   <article className='card'>
     <h3>{name}</h3>
     <ul>
       <li>species: {species}</li>
       <li>homeworld: {homeworld}</li>
-      <li>population: {popOfHome}</li>
+      <li>population: {population}</li>
     </ul>
     <button>Favorite</button>
   </article>
 )
 }
 
-export default personCard;
+export default Card;
 
 // Name
 // Homeworld
