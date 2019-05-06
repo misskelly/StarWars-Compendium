@@ -62,7 +62,7 @@ export default class App extends Component {
       
           <Gallery collection={this.state[activeComponent]} category={ activeComponent }/>
         }
-
+        
         </section>
       </main>
     );
