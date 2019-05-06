@@ -12,3 +12,14 @@
   width: 100%;
   overflow: auto;
 }
+
+.gallery-heading {
+  padding: 3rem 3rem 3rem 8rem;
+  text-align: center;
+  font-family: $jedi;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 0%);
+  text-shadow: $outline;
+  font-size: 5rem;
+  letter-spacing: 5rem;
+}
