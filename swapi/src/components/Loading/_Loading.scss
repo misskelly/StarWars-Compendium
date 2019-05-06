@@ -1,0 +1,22 @@
+// <div style="width:100%;height:0;padding-bottom:43%;position:relative;"><iframe src="https://giphy.com/embed/3ohuA9VZ0k8PMjLENa"width="100%"height="100%"style="position:absolute"frameBorder="0"class="giphy-embed"allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/starwars-star-wars-episode-2-3ohuA9VZ0k8PMjLENa">via GIPHY</a></p>
+
+.loading-screen {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.loading-text {
+  font-size: 4rem;
+  margin: 3rem;
+  padding: 3rem;
+}
+
+.gif {
+  border: none;
+  min-height: 250px;
+}

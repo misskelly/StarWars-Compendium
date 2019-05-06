@@ -28,10 +28,11 @@ export const getDirtyItems = (data, category) => {
   return Promise.all(promises);
 }
 
-export const getHomeworldInfo = (url) => {
+export const getHomeworldInfo = (url, breed) => {
   return fetchData(url)
     .then(planet => {
       return {
+        species: breed,
         homeworld: planet.name,
         population: planet.population
       }
@@ -40,5 +41,5 @@ export const getHomeworldInfo = (url) => {
 
 export const getSpecies = (url) => {
   return fetchData(url)
-    .then(species => ({species: species.name}))
+    .then(species => (species.name))
 }

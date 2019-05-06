@@ -13,11 +13,7 @@ exports[`App matches the snapshot 1`] = `
   <section
     className="container"
   >
-    <Header />
-    <Home
-      film={Object {}}
-      updateActiveComponent={[Function]}
-    />
+    <Loading />
   </section>
 </main>
 `;

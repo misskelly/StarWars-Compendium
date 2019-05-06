@@ -28,31 +28,26 @@ export const getNumeral = num => {
 export const handleClean = (data, category) => {
   
   const clean = getDirtyItems(data, category)
-    .then(result => {
-      console.log('.then')
-      cleanEach(result)
-    })
-  // .then(dirty => cleanEach(dirty, category))
-  // .catch(err => console.log('shit', err))
+    .then(result => cleanEach(result))
+    .catch(err => console.log('shit', err))
   
-  console.log(clean)
-  return clean
-  
+  return clean;
 }
 
 export const cleanEach = (collection) => {
   console.log('dirty')
+  console.log(collection)
   const cleaned = collection.map(item => {
     // console.log(item)
     return cleanPerson(item)
-            .then(person => console.log('clean person', person))
+      
+            // .then(person => console.log('clean person', person))
     // if (category === 'people') {
     //   return cleanPerson(item)
     // } else {
     //   return item;
     // }
   })
-  
   return Promise.all(cleaned)
 }
 
@@ -62,9 +57,10 @@ export const cleanVehicle= (ship) => {
 }
 
 export const cleanPerson = (person) => {
-  let breed = getSpecies(person.species)
-  let cleanedPerson = getHomeworldInfo(person.homeworld)
-      .then(planet => ({name: person.name, species: breed,  ...planet}))
+  let cleanedPerson = getSpecies(person.species)
+    .then(species => getHomeworldInfo(person.homeworld, species))
+      .then(planet => ({name: person.name,  ...planet}))
+      
   
   return cleanedPerson;
 }

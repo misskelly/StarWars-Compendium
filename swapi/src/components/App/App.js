@@ -29,11 +29,8 @@ export default class App extends Component {
       .then(film => this.setState({ film, loading: false }))
     }
   
-  
-
   getData(category) {
     const url = `https://www.swapi.co/api/${category}/`;
-    this.setState({ loading: true })
     return fetchData(url)
       .then(data => handleClean(data, category))
       .then(result => this.setState({ [category]: result, loading: false }))
@@ -41,7 +38,7 @@ export default class App extends Component {
   }
 
   updateActiveComponent(category) {
-    this.setState({ activeComponent: category });
+    this.setState({ activeComponent: category, loading: true });
     this.getData(category);
   }
 
@@ -54,14 +51,17 @@ export default class App extends Component {
         <div className='stars'></div>
         <div className='twinkling'></div>
         <section className='container'>
-        { loading && <Loading /> }
+        { loading === true && <Loading /> }
+        {loading === false &&
           <Header />
-          { activeComponent === '' &&
+        }
+        { loading === false && activeComponent === '' &&
           <Home updateActiveComponent={ this.updateActiveComponent } film={ film } />
-          }
-          { activeComponent !== '' && 
-            <Gallery collection={this.state[activeComponent]} category={ activeComponent }/>
-          }
+        }
+          { activeComponent !== '' && loading === false &&
+      
+          <Gallery collection={this.state[activeComponent]} category={ activeComponent }/>
+        }
 
         </section>
       </main>
