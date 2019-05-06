@@ -11,9 +11,11 @@ const Gallery = ({collection, category}) => {
   const cards = getCards(collection);
 
     return(
-      <section className='Gallery'>
+      <section className='gallery'>
         <h2 className='gallery-heading'>{category}</h2>
-      {collection.length > 0 && cards}
+        <div className='card-container'>
+          {collection.length > 0 && cards}
+        </div>
         
       </section>
     )

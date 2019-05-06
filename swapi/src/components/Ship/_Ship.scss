@@ -1,7 +1,7 @@
 //constants
 $pi: 3.14159265359;
 // Size (rem) and number (int)
-$circumference: 50;
+$circumference: 45;
 $segments: 20;
 
 @function getArcLength() {
@@ -16,7 +16,8 @@ $segments: 20;
 .ship-container {
   grid-area: ship;
   position: relative;
-  // overflow: hidden;
+  overflow: hidden;
+  width: 100%;
 }
 
 #ship {
