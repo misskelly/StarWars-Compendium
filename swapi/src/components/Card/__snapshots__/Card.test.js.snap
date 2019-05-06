@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card matches the snapshot 1`] = `
+<article
+  className="card"
+>
+  <h3
+    className="card-heading"
+  >
+    Luke Skywalker
+  </h3>
+  <ul>
+    <li
+      className="card-detail"
+    >
+      species: 
+      Human
+    </li>
+    <li
+      className="card-detail"
+    >
+      homeworld: 
+      Tatooine
+    </li>
+    <li
+      className="card-detail"
+    >
+      population: 
+      200000
+    </li>
+  </ul>
+  <button
+    className="fav-btn"
+  >
+    Favorite
+  </button>
+</article>
+`;

@@ -16,7 +16,6 @@ $segments: 20;
 .ship-container {
   grid-area: ship;
   position: relative;
-  overflow: hidden;
   width: 100%;
 }
 
@@ -29,7 +28,6 @@ $segments: 20;
   background: hsl(184, 6%, 47%);
   border-radius: 50%;
   border: 5px solid hsl(184, 6%, 47%);
-  // top: 10%;
   left: 50%;
   transform: translateX(-50%); //!!
 }

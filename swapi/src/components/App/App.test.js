@@ -1,8 +1,7 @@
 import React from 'react';
 import App from './App';
-import FeaturedFilm from '../FeaturedFilm/FeaturedFilm';
+
 import { shallow } from 'enzyme';
-// import { fetchFilm as mockFetchFilm } from '../../helpers/fetchCalls.js'
 import { mockCleanFilm, mockDirtyFilm } from '../../helpers/mockData.js';
 
 
@@ -17,6 +16,7 @@ describe('App', () => {
       planets: [],
       vehicles: [],
       film: {},
+      loading: true,
       errorStatus: '',
       activeComponent: ''
     }
@@ -43,12 +43,7 @@ describe('App', () => {
     expect(wrapper.state()).toEqual(initialState);
   });
 
-  it('renders a FeaturedFilm component with the correct props', () => {
-
-    wrapper.setState({ film: mockCleanFilm});
-    expect(wrapper.find(FeaturedFilm).prop('film')).toEqual(wrapper.state('film'));
-
-  });
+  
 
   // it('should set the film state on mount', () => {
   //   window.fetch = jest.fn().mockImplementation(() => {
