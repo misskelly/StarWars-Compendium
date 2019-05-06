@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading matches the snapshot 1`] = `
+<div
+  className="loading-screen"
+>
+  <p
+    className="loading-text"
+  >
+    Loading...
+  </p>
+  <iframe
+    className="gif"
+    src="https://giphy.com/embed/N8Lfh9gWcWYIU"
+    title="Turtle lightsaber battle"
+  />
+</div>
+`;
