@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ship matches the snapshot 1`] = `
+<section
+  className="ship-container"
+>
+  <div
+    className="pulse spinWheel"
+    id="ship"
+  >
+    <div
+      id="inner"
+    >
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+      <div
+        className="segment dash"
+      >
+        <span>
+           0 0 0 
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+`;
