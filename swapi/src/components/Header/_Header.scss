@@ -2,13 +2,16 @@
   grid-area: header;
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
+  background-color: hsla(0, 0%, 100%, 0.075)
 }
+
 ul,
 li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 
 .nav-left,
 .nav-right {
@@ -34,6 +37,16 @@ li {
   color: $yellow;
   text-shadow: $outline;
   font-size: 1rem;
+}
+
+.collections-menu-link,
+.main-menu-link {
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.61);
+  
 }
 
 .sw-heading {
