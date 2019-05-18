@@ -54,3 +54,16 @@ li {
   font-size: 3rem;
   line-height: 1;
 }
+
+li {
+  color: $yellow;
+}
+.nav-link {
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: scale(1.3);
+
+  }
+}
+

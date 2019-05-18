@@ -1,5 +1,6 @@
 @import 'normalize';
-@import url('https://fonts.googleapis.com/css?family=Gugi|Kanit:700,900|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Gugi|Kanit:700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,700&display=swap');
 @import 'variables';
 @import '../components/App/App';
 @import '../components/Header/Header';
@@ -47,6 +48,7 @@ body {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: -10000px 5000px;
   }
@@ -56,6 +58,7 @@ body {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: -10000px 5000px;
   }
@@ -65,6 +68,7 @@ body {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: -10000px 5000px;
   }
@@ -74,6 +78,7 @@ body {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: -10000px 5000px;
   }
