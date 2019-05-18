@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery matches the snapshot 1`] = `
+<section
+  className="gallery"
+>
+  <h2
+    className="gallery-heading"
+  >
+    people
+  </h2>
+  <div
+    className="card-container"
+  >
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Luke Skywalker",
+          "population": "200000",
+          "species": "Human",
+        }
+      }
+      key="0_Luke Skywalker"
+    />
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Tatooine",
+          "name": "C-3PO",
+          "population": "200000",
+          "species": "Droid",
+        }
+      }
+      key="1_C-3PO"
+    />
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Naboo",
+          "name": "R2-D2",
+          "population": "4500000000",
+          "species": "Droid",
+        }
+      }
+      key="2_R2-D2"
+    />
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Darth Vader",
+          "population": "200000",
+          "species": "Human",
+        }
+      }
+      key="3_Darth Vader"
+    />
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Alderaan",
+          "name": "Leia Organa",
+          "population": "2000000000",
+          "species": "Human",
+        }
+      }
+      key="4_Leia Organa"
+    />
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Owen Lars",
+          "population": "200000",
+          "species": "Human",
+        }
+      }
+      key="5_Owen Lars"
+    />
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Beru Whitesun lars",
+          "population": "200000",
+          "species": "Human",
+        }
+      }
+      key="6_Beru Whitesun lars"
+    />
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Tatooine",
+          "name": "R5-D4",
+          "population": "200000",
+          "species": "Droid",
+        }
+      }
+      key="7_R5-D4"
+    />
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Tatooine",
+          "name": "Biggs Darklighter",
+          "population": "200000",
+          "species": "Human",
+        }
+      }
+      key="8_Biggs Darklighter"
+    />
+    <Card
+      category="people"
+      item={
+        Object {
+          "homeworld": "Stewjon",
+          "name": "Obi-Wan Kenobi",
+          "population": "unknown",
+          "species": "Human",
+        }
+      }
+      key="9_Obi-Wan Kenobi"
+    />
+  </div>
+</section>
+`;
