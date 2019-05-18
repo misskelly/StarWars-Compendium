@@ -17,11 +17,13 @@
 + Use propTypes for every component receiving props.
 
 ### Future Iterations 
-+ "cleaner" functions to return appropriate information for planets and vehicles
-+ thorough testing suite
-+ incorporate React Router for links in nav bar
-+ logo should return user to home page
-+ mobile friendly ui
++ "Cleaner" functions to return appropriate information for planets and vehicles
++ Incorporate error handling
++ Add favorites functionality
++ Thorough testing suite
++ Incorporate React Router for links in nav bar
++ Logo should return user to home page
++ Mobile friendly ui
 
 ## Wireframe
 ![](swapi/src/Styles/images/wireframe.png)
