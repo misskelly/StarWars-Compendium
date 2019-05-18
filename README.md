@@ -1,5 +1,7 @@
 # StarWars
 A solo project created as part of the requirements of Module 3 (of 4) at Turing Software and Design.  Third project ever created in React, first using async JavaScript and fetch calls to a remote API, progress shown was completed in about five days.
+
+=======================================================================
 ![Demo](swapi/src/Styles/images/swapi.gif)
 
 ## Project Goals & Requirements:
