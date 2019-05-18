@@ -11,35 +11,27 @@ exports[`Header matches the snapshot 1`] = `
       className="nav-left-ul"
     >
       <li
-        className="main-menu-li"
+        className="main-menu-li nav-link"
       >
         <a
-
-          className="main-menu-link"
           href="#"
         >
           Home
         </a>
       </li>
       <li
-        className="main-menu-li"
+        className="main-menu-li nav-link"
       >
         <a
-
-          className="main-menu-link"
-
           href="www.instagram.com"
         >
           Learn More
         </a>
       </li>
       <li
-        className="main-menu-li"
+        className="main-menu-li nav-link"
       >
         <a
-
-          className="main-menu-link"
-
           href="www.instagram.com"
         >
           Contact
@@ -65,42 +57,36 @@ exports[`Header matches the snapshot 1`] = `
       className="nav-right-ul"
     >
       <li
-        className="collections-menu-li"
+        className="collections-menu-li nav-link"
       >
         <a
-
-          className="collections-menu-link"
-
           href="www.instagram.com"
         >
           Planets
         </a>
       </li>
       <li
-        className="collections-menu-li"
+        className="collections-menu-li nav-link"
       >
         <a
-          className="collections-menu-link"
           href="www.instagram.com"
         >
           People
         </a>
       </li>
       <li
-        className="collections-menu-li"
+        className="collections-menu-li nav-link"
       >
         <a
-          className="collections-menu-link"
           href="www.instagram.com"
         >
           Vehicles
         </a>
       </li>
       <li
-        className="collections-menu-li"
+        className="collections-menu-li nav-link"
       >
         <a
-          className="collections-menu-link"
           href="www.instagram.com"
         >
           Favorites
