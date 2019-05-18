@@ -6,8 +6,8 @@ $primary: 'Roboto Mono',
 monospace;
 
 
-$yellow: hsla(51, 100%, 50%, 1);
-$shadow: rgb(104, 99, 71);
+$yellow: hsl(51, 100%, 50%);
+$shadow: hsl(51, 19%, 34%);
 
 $outline: 2px 2px 0 $shadow, 2px -2px 0 $shadow, -2px 2px 0 $shadow, -2px -2px 0 $shadow, 2px 0px 0 $shadow, 0px 2px 0 $shadow, -2px 0px 0 $shadow, 0px -2px 0 $shadow;
 // buttons

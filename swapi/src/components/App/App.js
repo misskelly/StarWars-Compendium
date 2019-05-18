@@ -53,7 +53,7 @@ export default class App extends Component {
         <section className='container'>
         { loading === true && <Loading /> }
         {loading === false &&
-          <Header />
+          <Header updateActiveComponent={ this.updateActiveComponent }/>
         }
         { loading === false && activeComponent === '' &&
           <Home updateActiveComponent={ this.updateActiveComponent } film={ film } />

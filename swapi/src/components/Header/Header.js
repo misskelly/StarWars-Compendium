@@ -5,17 +5,17 @@ const Header = () => {
     <header className='header'>
       <nav className="nav-left">
         <ul className="nav-left-ul">
-          <li className="main-menu-li">
+          <li className="main-menu-li nav-link">
             <a href="#">
               Home
             </a>
           </li>
-          <li className="main-menu-li">
+          <li className="main-menu-li nav-link">
             <a href="www.instagram.com">
               Learn More
             </a>
           </li>
-          <li className="main-menu-li">
+          <li className="main-menu-li nav-link">
             <a href="www.instagram.com">
               Contact
             </a>
@@ -25,22 +25,22 @@ const Header = () => {
       <h1 className='main-heading'>A <span className='sw-heading'>StarWars</span>Compendium</h1>
       <nav className='nav-right'>
         <ul className='nav-right-ul'>
-          <li className="collections-menu-li">
+          <li className="collections-menu-li nav-link">
             <a href="www.instagram.com">
               Planets
             </a>
           </li>
-          <li className="collections-menu-li">
+          <li className="collections-menu-li nav-link">
             <a href="www.instagram.com">
               People
             </a>
           </li>
-          <li className="collections-menu-li">
+          <li className="collections-menu-li nav-link">
             <a href="www.instagram.com">
               Vehicles
             </a>
           </li>
-          <li className="collections-menu-li">
+          <li className="collections-menu-li nav-link">
             <a href="www.instagram.com">
               Favorites
             </a>
