@@ -1,7 +1,10 @@
-# StarWars
-A solo project created as part of the requirements of Module 3 (of 4) at Turing Software and Design.  Third project ever created in React, first using async JavaScript and fetch calls to a remote API, progress shown was completed in about five days.
+# SWAPI-BOX
++ Solo project, part of the requirements of Module 3 (of 4) at Turing Software and Design  
++ Third project ever built in React, first time using async JavaScript and fetch calls to a remote API  
++ Created using the [Star Wars API](https://swapi.co/) 
++ Progress shown was completed in about five days.
 
-=======================================================================
+## Demo
 ![Demo](swapi/src/Styles/images/swapi.gif)
 
 ## Project Goals & Requirements:
