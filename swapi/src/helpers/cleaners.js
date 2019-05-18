@@ -19,12 +19,7 @@ export const getNumeral = num => {
 }
 
 
-// mapResults(data, cat) {
-//   let items = (data.results.map(item => {
-//     return handleClean(item, cat)
-//   }))
-//   return Promise.all(items);
-// }
+
 export const handleClean = (data, category) => {
   
   const clean = getDirtyItems(data, category)

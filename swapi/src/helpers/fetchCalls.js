@@ -7,7 +7,7 @@ export const fetchFilm = () => {
   const url = `https://www.swapi.co/api/films/${randomNum}`
   return fetchData(url)
     .then(film => cleanFilm(film))
-    .catch(mock => cleanFilm(mockCleanFilm))
+    .catch(err => console.log(err))
   }
 
 export const fetchData = (url) => {
@@ -17,7 +17,6 @@ export const fetchData = (url) => {
 }
 
 export const getDirtyItems = (data, category) => {
-  // debugger
   let all = Array(data.count + 2).fill('')
   all = Object.getOwnPropertyNames(all).slice(1, (all.length - 1))
   let promises = all.map(item => {

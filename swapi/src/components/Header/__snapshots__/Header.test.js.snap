@@ -14,6 +14,8 @@ exports[`Header matches the snapshot 1`] = `
         className="main-menu-li"
       >
         <a
+
+          className="main-menu-link"
           href="#"
         >
           Home
@@ -23,6 +25,9 @@ exports[`Header matches the snapshot 1`] = `
         className="main-menu-li"
       >
         <a
+
+          className="main-menu-link"
+
           href="www.instagram.com"
         >
           Learn More
@@ -32,6 +37,9 @@ exports[`Header matches the snapshot 1`] = `
         className="main-menu-li"
       >
         <a
+
+          className="main-menu-link"
+
           href="www.instagram.com"
         >
           Contact
@@ -60,6 +68,9 @@ exports[`Header matches the snapshot 1`] = `
         className="collections-menu-li"
       >
         <a
+
+          className="collections-menu-link"
+
           href="www.instagram.com"
         >
           Planets
@@ -69,6 +80,7 @@ exports[`Header matches the snapshot 1`] = `
         className="collections-menu-li"
       >
         <a
+          className="collections-menu-link"
           href="www.instagram.com"
         >
           People
@@ -78,6 +90,7 @@ exports[`Header matches the snapshot 1`] = `
         className="collections-menu-li"
       >
         <a
+          className="collections-menu-link"
           href="www.instagram.com"
         >
           Vehicles
@@ -87,6 +100,7 @@ exports[`Header matches the snapshot 1`] = `
         className="collections-menu-li"
       >
         <a
+          className="collections-menu-link"
           href="www.instagram.com"
         >
           Favorites
