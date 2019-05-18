@@ -42,6 +42,7 @@ const Header = () => {
           </li>
           <li className="collections-menu-li nav-link">
             <a href="www.instagram.com">
+
               Favorites
             </a>
           </li>

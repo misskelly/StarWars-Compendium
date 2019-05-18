@@ -14,6 +14,7 @@ exports[`Header matches the snapshot 1`] = `
         className="main-menu-li"
       >
         <a
+
           className="main-menu-link"
           href="#"
         >
@@ -24,7 +25,9 @@ exports[`Header matches the snapshot 1`] = `
         className="main-menu-li"
       >
         <a
+
           className="main-menu-link"
+
           href="www.instagram.com"
         >
           Learn More
@@ -34,7 +37,9 @@ exports[`Header matches the snapshot 1`] = `
         className="main-menu-li"
       >
         <a
+
           className="main-menu-link"
+
           href="www.instagram.com"
         >
           Contact
@@ -63,7 +68,9 @@ exports[`Header matches the snapshot 1`] = `
         className="collections-menu-li"
       >
         <a
+
           className="collections-menu-link"
+
           href="www.instagram.com"
         >
           Planets

@@ -1,3 +1,4 @@
+
 .planets-btn {
   background: #159957;
   background: -webkit-linear-gradient(to right, #159957, #155799);
@@ -18,3 +19,15 @@
   background: rgb(255, 216, 0);
   background: linear-gradient(133deg, rgba(255, 216, 0, 1) 0%, rgba(254, 187, 8, 1) 22%, rgba(254, 121, 8, 1) 90%);
 }
+
+.home {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "left film right"
+    "left film right"
+    "left ship right";
+}
+
+
